@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://vicoblog.github.io/">
 <meta property="article:published_time" content="2024-08-07T05:30:22.000Z">
-<meta property="article:modified_time" content="2024-08-07T14:11:49.936Z">
+<meta property="article:modified_time" content="2024-08-07T14:12:57.769Z">
 <meta property="article:author" content="VicoGao">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-07T05:30:22.000Z">2024-08-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-07T14:11:49.936Z">2024-08-07</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-07T05:30:22.000Z">2024-08-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-07T14:12:57.769Z">2024-08-07</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -124,7 +124,12 @@
 <h3 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h3><p>图片懒加载是提升网站性能和用户体验的一个非常很好方式，并且几乎所有的大型网站都使用到了，比如微博，仅把用户可见的部分显示图片，其余的都暂时不加载，做法就是：让所有图片元素src指向一个小的站位图片比如loading，并新增一个属性(如data-original)存放真实图片地址。每当页面加载（或者滚动条滚动），使用JS脚本将可视区域内的图片src替换回真实地址，并做请求重新加载。  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-lazyload-image --save</span><br></pre></td></tr></table></figure>
 <p>_config.yml配置文件添加：  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lazyload:</span><br><span class="line">  enable: true  # 是否开启图片懒加载</span><br><span class="line">  onlypost: false  # 是否只对文章的图片做懒加载</span><br><span class="line">  loadingImg: loading.gif # eg ./images/loading.gif</span><br><span class="line">  isSPA: true</span><br></pre></td></tr></table></figure>
+<pre><code>lazyload:
+  enable: true  # 是否开启图片懒加载
+  onlypost: false  # 是否只对文章的图片做懒加载
+  loadingImg: loading.gif # eg ./images/loading.gif
+  isSPA: true  
+</code></pre>
 
 
 </article>
